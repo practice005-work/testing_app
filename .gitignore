@@ -1,0 +1,18 @@
+# Node
+node_modules/
+.env
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+
+# Build
+build/
