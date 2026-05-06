@@ -11,6 +11,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const PORT = process.env.PORT || 4000;
+
 // 🔐 ENV CHECK
 if (!process.env.ACCESS_SECRET || !process.env.REFRESH_SECRET) {
   throw new Error("Missing JWT secrets in .env");
@@ -370,6 +372,8 @@ app.delete("/patients/:id", authMiddleware, async (req, res) => {
 // 🚀 START SERVER
 // =======================
 
-app.listen(4000, "0.0.0.0", () => {
-  console.log("Server running on http://localhost:4000");
+
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
 });
