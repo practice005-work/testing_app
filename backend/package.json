@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< HEAD
  "scripts": {
   "dev": "tsx watch index.ts",
   "start": "tsx index.ts"
 },
+=======
+  "scripts": {
+    "dev": "tsx watch index.ts",
+    "start": "tsx index.ts"
+  },
+>>>>>>> 6144cd1 (fix add start script for render)
   "keywords": [],
   "author": "",
   "license": "ISC",

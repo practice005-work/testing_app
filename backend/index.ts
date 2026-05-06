@@ -372,8 +372,11 @@ app.delete("/patients/:id", authMiddleware, async (req, res) => {
 // 🚀 START SERVER
 // =======================
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6144cd1 (fix add start script for render)
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
