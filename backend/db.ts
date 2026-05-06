@@ -1,9 +1,13 @@
 import { Kysely, PostgresDialect } from "kysely";
 import { Pool } from "pg";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: false, // keep false for local
+  ssl: isProduction
+    ? { rejectUnauthorized: false } // ✅ required for Supabase/Render
+    : false, // ✅ local
 });
 
 // 🔥 Prevent crash when DB disconnects
