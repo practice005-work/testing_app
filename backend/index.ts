@@ -111,9 +111,12 @@ app.post("/signup", async (req, res) => {
       name: user?.name,
       email: user?.email,
     });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Signup failed" });
+  } catch (err: any) {
+    console.error("SIGNUP ERROR:", err);
+    res.status(500).json({
+      error: err.message,
+      full: err,
+    });
   }
 });
 
